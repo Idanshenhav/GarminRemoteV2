@@ -1,16 +1,5 @@
-/**
- * Build configuration for the CameraClick Android application.
- * This file defines:
- * - Project dependencies and versions
- * - Android build settings
- * - Firebase integration
- * - ConnectIQ SDK integration
- */
-
 plugins {
     id("com.android.application")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
     id("com.google.dagger.hilt.android")
     kotlin("android")
     kotlin("kapt")
@@ -79,12 +68,6 @@ dependencies {
 
     // Garmin ConnectIQ SDK
     implementation("com.garmin.connectiq:ciq-companion-app-sdk:2.2.0@aar")
-
-    // Firebase dependencies
-    implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
-    implementation("com.google.firebase:firebase-common-ktx")
-    implementation("com.google.firebase:firebase-crashlytics-ktx")
-    implementation("com.google.firebase:firebase-analytics-ktx")
 
     // JSON serialization
     implementation("com.google.code.gson:gson:2.10.1")
